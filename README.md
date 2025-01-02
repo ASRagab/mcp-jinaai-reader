@@ -1,0 +1,1 @@
+# MCP Server for the Jina.ai Reader API
