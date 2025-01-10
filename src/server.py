@@ -1,9 +1,11 @@
-from fastmcp import FastMCP
+from mcp.server.fastmcp import FastMCP
 import httpx
 from urllib.parse import urlparse
 import os
 
-mcp = FastMCP("search", dependencies=["uvicorn"])
+# Bug: https://github.com/modelcontextprotocol/python-sdk/issues/148 
+# requires addition of "mcp[cli]" as a dependency
+mcp = FastMCP("search", dependencies=["mcp[cli]"])
 
 JINAAI_SEARCH_URL = "https://s.jina.ai/"
 JINAAI_READER_URL = "https://r.jina.ai/"
